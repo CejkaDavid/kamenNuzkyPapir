@@ -1,0 +1,75 @@
+/* CSS Document */
+.grid{
+    margin-top: 30px;
+    grid-template-rows: 75px 100px 3fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    display:grid;
+    height: 100%;
+    width: 100%;
+}
+
+.nadpis{
+    grid-column: 1 / span 3;
+    font-size: 60px;
+  /*padding: 80px 50px;*/
+  text-align: center;
+  text-transform: uppercase;
+  /*text-rendering: optimizeLegibility;*/
+
+    color: #202020;
+     background-color: #2d2d2d;
+    letter-spacing: .1em;
+    text-shadow: 
+      -1px -1px 1px #111, 
+      2px 2px 1px #363636;
+      
+}
+
+.tlacitka{
+    grid-column: 1 / span 3;
+    text-align: center;
+    margin: auto auto;
+}
+
+.button{
+    font-size: 24px;
+    padding: 10px 25px;
+    margin-left:30px;
+    display: inline-block;
+
+    background-color: #2d2d2d;
+    border-color: #999999 ;
+    outline: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 6px 6px #202020;
+}
+
+button:hover{
+    background-color: #272727;
+}
+
+.skoreUzivatel {
+    margin-left: auto;
+}
+
+#skoreUzivatel{
+    font-size: 50px;
+    padding-left: 20px;
+}
+
+.vysledek {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    padding-top: 40px;
+}
+
+.skorePC {
+    margin-right: auto;
+}
+
+#skorePC {
+    font-size: 50px;
+    padding-left: 20px;
+}
