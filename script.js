@@ -4,25 +4,50 @@ var PCmoznosti = ["Kámen", "Nůžky", "Papír"];
     var hracRozhodnuti;
     var skoreUzivatel = 0;
     var skorePC = 0;
+    var createImgUzivatel = document.createElement("IMG");
+        createImgUzivatel.setAttribute("height", "100");
+    var createImgPC = document.createElement("IMG");
+        createImgPC.setAttribute("height", "100");
+    
     
     function kamen(){
         hracRozhodnuti = "Kámen";
+        createImgUzivatel.setAttribute("src", "kamen.png");
+        document.getElementById("obrazekUzivatel").appendChild(createImgUzivatel);
         PChrej();
     }
     
     function papir(){
         hracRozhodnuti = "Papír";
+        createImgUzivatel.setAttribute("src", "papir.png");
+        document.getElementById("obrazekUzivatel").appendChild(createImgUzivatel);
         PChrej();
     }
     
     function nuzky(){
         hracRozhodnuti = "Nůžky";
+        createImgUzivatel.setAttribute("src", "nuzky.png");
+        document.getElementById("obrazekUzivatel").appendChild(createImgUzivatel);
         PChrej();
     }
     
     function PChrej() {
         PCrozhodnuti = PCmoznosti[Math.floor(Math.random()*PCmoznosti.length)];
-        console.log("PC vybral: " + PCrozhodnuti)
+        console.log("PC vybral: " + PCrozhodnuti);
+        switch (PCrozhodnuti){
+            case "Kámen":
+                createImgPC.setAttribute("src", "kamen.png");
+                document.getElementById("obrazekPC").appendChild(createImgPC); 
+                break;
+            case "Nůžky":
+                createImgPC.setAttribute("src", "nuzky.png");
+                document.getElementById("obrazekPC").appendChild(createImgPC); 
+                break;
+            case "Papír":
+                createImgPC.setAttribute("src", "papir.png");
+                document.getElementById("obrazekPC").appendChild(createImgPC); 
+                break;
+        }
         kdoVyhral();
     }
     
